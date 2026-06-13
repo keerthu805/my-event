@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  height: 120vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8; /* Semi white */
+}
+
+.card {
+  text-align: center;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 800px;
+}
+
+.title {
+  color: darkgreen;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  color: darkgreen;
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.login-btn {
+  background-color: darkgreen;
+  color: white;
+  border: none;
+   padding: 12px 45px; 
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+ margin-top: 10px;
+  justify-content: center;
+}
+
+.login-btn:hover {
+  background-color: #006400;
+  transform: scale(1.05);
+}
