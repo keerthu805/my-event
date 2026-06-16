@@ -1,9 +1,9 @@
-import  { useState } from "react";
+import React, { useState } from "react";
 import "./Register.css";
 import { useNavigate } from "react-router-dom";
 
 function Register() {
-    const route = useNavigate()
+  const route = useNavigate()
 
     const NavReg = (type: any) => {
         if (type == 1) {
@@ -18,16 +18,30 @@ function Register() {
     event: "",
   });
 
-  const handleChange = (e) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSelectChange = (
+    e: React.ChangeEvent<HTMLSelectElement>
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (
+    e: React.FormEvent<HTMLFormElement>
+  ) => {
     e.preventDefault();
     alert("Registration Submitted Successfully!");
+    console.log(formData);
   };
 
   return (
@@ -41,9 +55,9 @@ function Register() {
             <input
               type="text"
               name="name"
-              placeholder="Enter your name"
+              placeholder="Enter your Name"
               value={formData.name}
-              onChange={handleChange}
+              onChange={handleInputChange}
               required
             />
           </div>
@@ -53,9 +67,9 @@ function Register() {
             <input
               type="email"
               name="email"
-              placeholder="Enter your email"
+              placeholder="Enter your Email"
               value={formData.email}
-              onChange={handleChange}
+              onChange={handleInputChange}
               required
             />
           </div>
@@ -65,9 +79,9 @@ function Register() {
             <input
               type="number"
               name="age"
-              placeholder="Enter your age"
+              placeholder="Enter your Age"
               value={formData.age}
-              onChange={handleChange}
+              onChange={handleInputChange}
               required
             />
           </div>
@@ -77,7 +91,7 @@ function Register() {
             <select
               name="gender"
               value={formData.gender}
-              onChange={handleChange}
+              onChange={handleSelectChange}
               required
             >
               <option value="">Select Gender</option>
@@ -92,7 +106,7 @@ function Register() {
             <select
               name="event"
               value={formData.event}
-              onChange={handleChange}
+              onChange={handleSelectChange}
               required
             >
               <option value="">Choose an Event</option>
@@ -103,7 +117,7 @@ function Register() {
             </select>
           </div>
 
-          <button type="submit" className="submit-btn" onClick={()=>NavReg(1)}>
+          <button type="submit" className="submit-btn" onClick={()=>{NavReg (1)}}>
             Submit
           </button>
         </form>
@@ -113,3 +127,6 @@ function Register() {
 }
 
 export default Register;
+
+
+ 
