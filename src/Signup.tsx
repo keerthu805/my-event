@@ -26,7 +26,7 @@ export default function Signup() {
             });
         };
 
-        const handleSubmit = (e) => {
+        const handleSubmit = (e:any) => {
             e.preventDefault();
 
             if (formData.password !== formData.confirmPassword) {
@@ -49,6 +49,8 @@ export default function Signup() {
                             name="firstName"
                             placeholder="First Name"
                             value={formData.firstName}
+                            onChange={handleChange}
+          required
                              />
                      <h5>Last Name:</h5>
                         <input
@@ -56,6 +58,8 @@ export default function Signup() {
                             name="lastName"
                             placeholder="Last Name"
                             value={formData.lastName}
+                            onChange={handleChange}
+          required
                            
                         />
                     <h5>Emaild ID:</h5>
@@ -63,7 +67,9 @@ export default function Signup() {
                             type="email"
                             name="email"
                             placeholder="Email ID"
-                            value={formData.email}/>
+                            value={formData.email}
+                            onChange={handleChange}
+          required/>
                             
                     <h5>Password:</h5>
                         <input
@@ -71,7 +77,8 @@ export default function Signup() {
                             name="password"
                             placeholder="Password"
                             value={formData.password}
-                            
+                         onChange={handleChange}
+          required   
                         />
                     <h5>Confirm the Password:</h5>
                         <input
@@ -79,7 +86,8 @@ export default function Signup() {
                             name="confirmPassword"
                             placeholder="Confirm Password"
                             value={formData.confirmPassword}
-                            
+                            onChange={handleChange}
+          required
                         />
 
                         <button type="submit" onClick={() => SignNav(1)}>Submit</button>
