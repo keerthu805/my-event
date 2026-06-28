@@ -20,6 +20,7 @@ function Arts() {
   const [artSelectedImage, setArtSelectedImage] = useState(images[0]);
 
   return (
+    <>
     <div className="art-page">
       <div className="art-card">
         
@@ -87,7 +88,8 @@ In addition to showcasing talent, the Arts Festival plays an important role in p
 
       </div>
     </div>
-  );
+    </>
+  )
 }
 
 export default Arts;

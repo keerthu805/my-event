@@ -20,18 +20,18 @@ export default function  Startup() {
   const [selectedImage, setSelectedImage] = useState(images[0]);
 
   return (
+    <>
     <div className="startup-container">
       <div className="startup-card">
-        {/* First Row */}
+       
         <div className="header">
           <h1>💡 Startup Ideas Program</h1>
           <button className="register-btn" onClick={()=>{StartNav(1)}}>Register</button>
         </div>
 
-        {/* Second Row */}
+       
         <div className="divider"></div>
 
-        {/* Third Row - Image Slider */}
         <div className="gallery">
           <div className="main-image">
             <img src={selectedImage} alt="Startup Event" />
@@ -49,7 +49,7 @@ export default function  Startup() {
           </div>
         </div>
 
-        {/* Fourth Row - Content */}
+     
         <div className="content">
           <h2>💡 Startup Ideas Program</h2>
           <hr />
@@ -111,7 +111,7 @@ export default function  Startup() {
 
         </div>
       </div>
-    
+    </>
   )
 }
 

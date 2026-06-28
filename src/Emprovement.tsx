@@ -21,6 +21,7 @@ export default function Emprovement() {
   const [selectedImage, setSelectedImage] = useState(images[0]);
 
   return (
+    <>
     <div className="emp-page-container">
       <div className="emp-card">
 
@@ -86,6 +87,7 @@ The program also encourages innovation, entrepreneurship, and community involvem
 
       </div>
     </div>
-  );
+    </>
+  )
 }
 

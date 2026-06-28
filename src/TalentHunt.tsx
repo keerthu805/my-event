@@ -20,15 +20,16 @@ const Talenthunt = () => {
   const [talentCurrentImage, setTalentCurrentImage] = useState(images[0]);
 
   return (
+    <>
     <div className="talent-container">
       <div className="talent-card">
-        {/* First Row */}
+        
         <div className="talent-header">
           <h1 className="talent-title">🎭Talent Hunt</h1>
           <button className="talent-register-btn" onClick={()=>talentNav(1)}>Register</button>
         </div>
         <hr />
-        {/* Image Slider Row */}
+       
         <div className="talent-slider-section">
           <div className="talent-big-image-container">
             <img
@@ -51,7 +52,7 @@ const Talenthunt = () => {
           </div>
         </div>
 
-        {/* Content Row */}
+       
         <div className="talent-content">
           
         <h3>💃 Dancing</h3>
@@ -91,7 +92,8 @@ const Talenthunt = () => {
         </div>
       </div>
     </div>
-  );
-};
+    </>
+  )
+}
 
 export default Talenthunt;

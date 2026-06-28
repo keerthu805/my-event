@@ -9,7 +9,7 @@ export default function Mainpage() {
             navigate('/Signin')
         }}
   return (
-    
+    <>
     <div className="main-container">
       <div className="card">
         <h1 className="title">
@@ -64,6 +64,7 @@ export default function Mainpage() {
         <button className="login-btn" onClick={()=>MainNav(1)}>Signin</button>
       </div>
     </div>
+    </>
   )
 }
 

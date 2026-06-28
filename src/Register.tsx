@@ -45,6 +45,7 @@ function Register() {
   };
 
   return (
+    <>
     <div className="register-container">
       <div className="register-card">
         <h2>Event Registration</h2>
@@ -123,7 +124,8 @@ function Register() {
         </form>
       </div>
     </div>
-  );
+    </>
+  )
 }
 
 export default Register;

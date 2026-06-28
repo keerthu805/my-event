@@ -32,8 +32,9 @@ function Events() {
   const [selectedImage, setSelectedImage] = useState(images[0]);
 
   return (
+    <>
     <div className="events-container">
-      {/* First Row */}
+     
       <div className="header">
         <h1>Unity Feast 2026</h1>
 
@@ -43,7 +44,7 @@ function Events() {
         </div>
       </div>
 
-      {/* Second Row */}
+   
       <div className="event-buttons">
         <button onClick={()=>NavEvents(1)}>Talent Hunt</button>
         <button onClick={()=>NavEvents(2)}>Empowerment</button>
@@ -51,7 +52,7 @@ function Events() {
         <button onClick={()=>NavEvents(4)}>Startup Ideas</button>
       </div>
 
-      {/* Third Row - Image Slider */}
+    
       <div className="gallery">
         <div className="main-image">
           <img src={selectedImage} alt="Main Event" />
@@ -69,7 +70,7 @@ function Events() {
         </div>
       </div>
 
-      {/* Fourth Row */}
+   
       <div className="content-section">
         <h2>🎤 Talent Hunt</h2>
         <p>
@@ -111,7 +112,6 @@ function Events() {
         </p>
       </div>
 
-      {/* Fifth Row */}
       <div className="contact-section">
         <h2>Contact Details</h2>
 
@@ -125,7 +125,8 @@ function Events() {
         </p>
       </div>
     </div>
-  );
+    </>
+  )
 }
 
 export default Events;
